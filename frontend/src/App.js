@@ -1,15 +1,14 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Register from './components/Register';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import UploadPage from "./components/UploadImage"; // new component you'll build
 
-const App = () => {
+function App() {
   return (
     <Router>
-      <Switch>
-        <Route path="/register" component={Register} />
-      </Switch>
+      <Routes>
+        <Route path="/" element={<UploadPage />} />
+      </Routes>
     </Router>
   );
-};
+}
 
 export default App;
